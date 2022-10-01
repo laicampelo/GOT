@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Game of Thrones</title>
+</head>
+<body>
+    <section>
+        <div id="carregamento" class="container w-100">
+            <img id="imgCarregamento" src="./img/got-inicio.png" alt="">
+        </div>
+        <main class="container w-100">
+            <div class="search" style="display: none;">
+                <img class='trono'src="./img/pngegg (1).png" alt="">
+                <img src="./img/app_img.png" alt="">
+                <div>
+                    <input type="search" name="" id="search" placeholder="Ex.: Arya Stark">
+                </div>
+            </div>
+            <div id="app" class="container" style="display:none;">
+            </div>
+        </main>
+
+        <div id="modal" style="display:none;">
+            <div class="infoPersonagens">
+                <button id="closeModal">x</button>
+                <h2 id="nomeModal"></h2>
+                <img id="imagemModal">
+                <p id="tituloModal"></p>
+                <p id="familiaModal"></p>
+                <p id="frasePersonagem"></p>
+            </div>
+        </div>
+</section>
+    <script src="./src/app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>

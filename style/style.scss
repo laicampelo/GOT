@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+$backgroundCor:#000;
+$app:#000000bf;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel Decorative', cursive, sans-serif;
+}
+p {
+    margin: 0.5rem;
+}
+
+body {
+    height: 100%;
+    background-color: $backgroundCor;
+    #carregamento {
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+        height: 100vh;
+        img {
+            height: 100%;
+            margin: auto;
+        }
+    }
+    main{
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        min-width: 100%;
+        .search {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            .trono {
+                width: 951px;
+                z-index: -1;
+                position: absolute;
+            }
+
+            img {
+                width: 738px;
+            }
+
+            div {
+                padding: 30px;
+                input {
+                    background-color: #000000c7;
+                    color: #6b7269;
+                    border: 2px solid #6b7269;   
+                    border-radius: 10px;
+                    width: 300px;
+                    height: 30px;
+                    padding: 0 5px;
+                }
+            }
+        }
+    
+        #app {
+            background-color: $app;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding:  20px 100px;
+        
+            .personagens {
+                max-width: 80px;
+                max-height:80px;
+                border-radius: 10%;
+                margin: 0.5rem;
+                cursor: pointer;
+                transition: ease-in-out 0.3s;
+                object-fit: cover;
+            }
+            .personagens:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    #modal {
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+
+        .infoPersonagens {
+            flex-direction: column;
+            display: flex;
+            margin: 200px auto;
+            align-items: center;
+            width: 450px;
+            background-color: #1a1d246b;
+            padding: 10px;
+            border-radius: 10px 0;
+
+            #frasePersonagem {
+                text-align: center;
+                font-style: oblique;
+                font-size: 13px;
+                color: dimgray;
+                font-weight: bolder;
+            }
+            #closeModal {
+                position: relative;
+                top: -20px;
+                right: -216px;
+                padding: 5px 10px;
+                border-radius: 50%;
+                border: 3px solid #020303;
+                background: #741b0c;
+                color: #FFF;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+            #closeModal:hover {
+                background: #e02909;
+            }
+            h2, p{
+                color: #6b7269;
+            }
+            h2{
+                font-weight: 700;
+            }
+            img {
+                max-width:150px;
+                border-radius: 50%;
+                min-height: 150px;
+                max-height: 150px;
+                object-fit: cover;
+            }
+
+
+            
+        }   
+
+    }
+}
+
+
+@media (max-width: 700px){
+    body {
+        display: flex;
+        flex-direction: column;
+        section {
+            width: 400px!important;
+            #carregamento{
+                width: 100%;
+                img {
+                    width:100%;
+                }
+            }
+            main {
+                width: 100%;
+                margin: 0;
+                .search {
+                    width: 100%;
+                    img {
+                       width:357px;
+                    }
+                }
+                #app {
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            #modal {
+                width: 100%;
+                .infoPersonagens {
+                    width: 300px;
+                    text-align: center;
+                    #closeModal{
+                        right: -137px;
+                    }
+                }
+            }
+        }
+    }
+}

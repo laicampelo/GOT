@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cinzel Decorative", cursive, sans-serif;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+body {
+  height: 100%;
+  background-color: #000;
+}
+body #carregamento {
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  height: 100vh;
+}
+body #carregamento img {
+  height: 100%;
+  margin: auto;
+}
+body main {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+}
+body main .search {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+body main .search .trono {
+  width: 951px;
+  z-index: -1;
+  position: absolute;
+}
+body main .search img {
+  width: 738px;
+}
+body main .search div {
+  padding: 30px;
+}
+body main .search div input {
+  background-color: rgba(0, 0, 0, 0.7803921569);
+  color: #6b7269;
+  border: 2px solid #6b7269;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  padding: 0 5px;
+}
+body main #app {
+  background-color: rgba(0, 0, 0, 0.7490196078);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 100px;
+}
+body main #app .personagens {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 10%;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #app .personagens:hover {
+  transform: scale(1.2);
+}
+body #modal {
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+body #modal .infoPersonagens {
+  flex-direction: column;
+  display: flex;
+  margin: 200px auto;
+  align-items: center;
+  width: 450px;
+  background-color: rgba(26, 29, 36, 0.4196078431);
+  padding: 10px;
+  border-radius: 10px 0;
+}
+body #modal .infoPersonagens #frasePersonagem {
+  text-align: center;
+  font-style: oblique;
+  font-size: 13px;
+  color: dimgray;
+  font-weight: bolder;
+}
+body #modal .infoPersonagens #closeModal {
+  position: relative;
+  top: -20px;
+  right: -216px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 3px solid #020303;
+  background: #741b0c;
+  color: #FFF;
+  font-weight: bolder;
+  cursor: pointer;
+}
+body #modal .infoPersonagens #closeModal:hover {
+  background: #e02909;
+}
+body #modal .infoPersonagens h2, body #modal .infoPersonagens p {
+  color: #6b7269;
+}
+body #modal .infoPersonagens h2 {
+  font-weight: 700;
+}
+body #modal .infoPersonagens img {
+  max-width: 150px;
+  border-radius: 50%;
+  min-height: 150px;
+  max-height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body section {
+    width: 400px !important;
+  }
+  body section #carregamento {
+    width: 100%;
+  }
+  body section #carregamento img {
+    width: 100%;
+  }
+  body section main {
+    width: 100%;
+    margin: 0;
+  }
+  body section main .search {
+    width: 100%;
+  }
+  body section main .search img {
+    width: 357px;
+  }
+  body section main #app {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+  }
+  body section #modal {
+    width: 100%;
+  }
+  body section #modal .infoPersonagens {
+    width: 300px;
+    text-align: center;
+  }
+  body section #modal .infoPersonagens #closeModal {
+    right: -137px;
+  }
+}/*# sourceMappingURL=style.css.map */
