@@ -28,7 +28,7 @@
 * Clicar;
 * Visualizar as informações, foto, título, casa e frase;
 * Sair do modal;
-<a href="https://guileless-cocada-18784b.netlify.app">Teste o projeto</a>
+<a href="https://gotrones.netlify.app/">Teste o projeto</a>
 <img src="./img/principal.png">
 <img src="./img/personagem.png">
 
@@ -54,10 +54,10 @@ $ index.html ou server live(plugin do vscode)
 
 ### Tecnologias utilizadas
 
-* HTML
 * JavaScript
-* CSS
-* Bootstrap
+* API
+* SASS
+* HTML
 
 ### Autor
 Feito com ❤️ por Laihanne Campelo 👋🏽 Entre em contato!
