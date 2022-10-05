@@ -62,8 +62,8 @@ body main #app {
   padding: 20px 100px;
 }
 body main #app .personagens {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 120px;
+  max-height: 86px;
   border-radius: 10%;
   margin: 0.5rem;
   cursor: pointer;
@@ -117,7 +117,7 @@ body #modal .infoPersonagens #closeModal:hover {
   background: #e02909;
 }
 body #modal .infoPersonagens h2, body #modal .infoPersonagens p {
-  color: #6b7269;
+  color: #a2aaa2;
 }
 body #modal .infoPersonagens h2 {
   font-weight: 700;
@@ -132,10 +132,6 @@ body #modal .infoPersonagens img {
 }
 
 @media (max-width: 700px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
   body section {
     width: 400px !important;
   }
@@ -146,8 +142,11 @@ body #modal .infoPersonagens img {
     width: 100%;
   }
   body section main {
-    width: 100%;
+    width: 97%;
     margin: 0;
+  }
+  body section main .trono {
+    width: 100% !important;
   }
   body section main .search {
     width: 100%;

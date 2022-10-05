@@ -1,10 +1,14 @@
+//importação dos módulos 
+
 import {conectarDados} from './conexao.js'
-import {citacao} from './conexao.js'
 import {infoPersonagens, frasesPersonagens} from './dados.js'
 
-let urlImg="https://thronesapi.com/api/v2/Characters"
-let urlCitacao="https://api.gameofthronesquotes.xyz/v1/characters"
+//url das API's transformadas em variável
+const urlImg="https://thronesapi.com/api/v2/Characters"
+const urlCitacao="https://api.gameofthronesquotes.xyz/v1/characters"
 
+
+//função que conecta as informações da api e fazer um filtro nas informações que serão exibidas
 conectarDados(urlImg, (response)=>{
 
     response.forEach((e)=>{
@@ -15,7 +19,7 @@ conectarDados(urlImg, (response)=>{
     inserirImg(infoPersonagens)
 })
 
-citacao(urlCitacao, (response)=>{
+conectarDados(urlCitacao, (response)=>{
 
     response.forEach((elemento)=>{
         let frase=[elemento.name, elemento.quotes[0]]
@@ -24,7 +28,7 @@ citacao(urlCitacao, (response)=>{
     })
 })
 
-
+// Função que será utilizada para fazer a pesquisa dos personagens pelo usuário
 function inserirImg(array){
 
     let divApp=document.querySelector('#app')
@@ -45,11 +49,14 @@ function inserirImg(array){
         divApp.append(elemento)
     })
 
+    //modificação do html a partir da entrada de informações da API
     divApp.style.display='flex'
     imgCarregamento.style.display='none'
     divSearch.style.display='flex'
 }
 
+//função que faz um filtro e seleciona somente a primeira frase da API e exibe junto com as imagens no modal.
+//Caso o personagem não tenha frase, exibirá somente o nome, titulo e casa.
 function exibirInfo(i){
     let frase ="";
     try {
@@ -74,6 +81,7 @@ function exibirInfo(i){
     familiaModal.innerText=i[1];
 
 
+    //Condições que irão verificar a casa do personagem e mdificar o background do modal a partir da cor da casa do personagem
     if(i[1]==='House Targaryen' || i[1]==='Targaryan'){
         infoPersonagens.style.backgroundColor='rgba(227, 44, 28, 0.3)'
         }
@@ -103,17 +111,20 @@ function exibirInfo(i){
         }
 }
 
+//evento para fechamento do modal
 document.querySelector('#closeModal').addEventListener('click', ()=>{
     document.querySelector('#modal').style.display='none'
     
 })
 
+//pesquisa de personagem
 let t = document.querySelector('#search');
 t.addEventListener('keydown', ()=>{
     let a = filtro(t.value, infoPersonagens)
     inserirImg(a)
 })
 
+//função de filtro feita para ser utilizada por outras funções
 function filtro(nome, array){
 
     let f = array.filter( el => el[0].toLowerCase().indexOf(nome.toLowerCase()) > -1);
